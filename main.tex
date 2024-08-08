@@ -79,4 +79,20 @@ let N(x, y) be "x is a neighbour of y"
 \par\parskip 2pt
 $\neg$($\exists$x.N(x, a))
 
+\par\noindent\parskip 2pt
+\textbf{b) Ben has two neighbours}
+\par\parskip 2pt
+$\exists$x$\exists$y(N(x, b) $\land$ N(y, b) $\land$
+$\forall$z(N(z, b) $\implies$ (z = x $\lor$ z = y)))
+
+\par\noindent\parskip 2pt
+\textbf{c) If somebody is a neighbour of Ben, Ben is also a neighbour of that person}
+\par\parskip 2pt
+$\forall$x(N(x, b) $\implies$ N(b, x))
+
+\par\noindent\parskip 2pt
+\textbf{d) Except for Anna, everyone is the neighbour of someone}
+\par\parskip 2pt
+$\forall$x(x $\neq$ a $\implies$ $\exists$y(N(y, x)))
+
 \end{document}
