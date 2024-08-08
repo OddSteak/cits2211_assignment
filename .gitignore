@@ -1,1 +1,2 @@
-.latexbuild/
+.latexbuild/*
+!.latexbuild/main.pdf
