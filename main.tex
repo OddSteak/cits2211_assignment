@@ -1,27 +1,75 @@
 \documentclass[a4paper]{article}
 \usepackage[margin=40pt]{geometry}
+\usepackage{amsmath}
 
 \begin{document}
 
 \section*{Question 1}
+
+
 \subsection*{a) P $\lor$ (Q $\lor$ $\neg$P)}
 
 \begin{displaymath}
     \begin{array}{|c c| c | c | c |}
+        \hline
         P & Q & \neg P & Q \lor \neg P & P \lor (Q \lor \neg P)\\
         \hline
         T & T & F & T & T\\
         T & F & F & F & T\\
         F & T & T & T & T\\
         F & F & T & T & T\\
+        \hline
     \end{array}
 \end{displaymath}
 
-as the truth table demonstrates the proposition is a tautology since
+As the truth table demonstrates, the proposition is a tautology since
 it's always true regardless of the truth values of Q or P
+
+
+\subsection*{b) (P $\land$ $\neg$P) $\lor$ $\neg$Q}
+
+P $\land$ $\neg$P is a contradiction since both P and it's negation can't be
+true.\\
+$\neg$Q can either be true of false\\
+hence, the proposition is a contingent
+
+
+\subsection*{c) Q $\implies$ (P $\land$ $\neg$Q)}
+
+\begin{displaymath}
+    \begin{array}{|c|c|c|c|c|}
+        \hline
+        P & Q & \neg Q & P \land \neg Q & Q \rightarrow (P \land \neg Q) \\
+        \hline
+        T & T & F & F & F \\
+        T & F & T & T & T \\
+        F & T & F & F & F \\
+        F & F & T & F & T \\
+        \hline
+    \end{array}
+\end{displaymath}
+
+As the truth table demonstrates, the truth value of the proposition depends on
+the truth values of P and Q.\\
+Hence, the proposition is a contingent.
+
 
 \section*{Question 2}
 \subsection*{P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ $\neg$Q}
+By De Morgan's laws: P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ ($\neg$P $\land$ Q)\\
+By distributivity:\;\;\;\;\;\;\; P $\lor$ ($\neg$P $\land$ Q) $\equiv$ (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q)\\
+By excluded middle:\;\; (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q) $\equiv$ T $\land$ (P $\lor$ Q)\\
+By Absorption:\;\;\;\;\;\;\;\;\;\; T $\land$ (P $\lor$ Q) $\equiv$ P $\lor$ Q
+
+\vspace{10pt}
+
+\emph{Q.E.D.}
+
+\section*{Question 3}
+$\forall$x $\exists$n (x $\le$ n $\leq$ x+5 $\land$
+($\exists$a())
+)
+
 
 
 \end{document}
