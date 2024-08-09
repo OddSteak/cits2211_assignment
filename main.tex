@@ -1,6 +1,7 @@
 \documentclass[a4paper]{article}
-\usepackage[margin=40pt]{geometry}
+\usepackage[margin=30pt]{geometry}
 \usepackage{amsmath}
+\usepackage{lmodern}
 
 \pagestyle{empty}
 \title{\textbf{CITS2211 Assignment 1}}
@@ -8,11 +9,11 @@
 \date{}
 
 \begin{document}
+\parskip 2mm
 \maketitle
 \thispagestyle{empty}
 
 \section*{Question 1}
-
 
 \subsection*{a) P $\lor$ (Q $\lor$ $\neg$P)}
 
@@ -28,17 +29,17 @@
         \hline
     \end{array}
 \end{displaymath}
-
+%
 As the truth table demonstrates, the proposition is a tautology since
 it's always true regardless of the truth values of Q or P
 
 
 \subsection*{b) (P $\land$ $\neg$P) $\lor$ $\neg$Q}
 
-P $\land$ $\neg$P is a contradiction since both P and it's negation can't be
-true.\\
-$\neg$Q can either be true of false\\
-hence, the proposition is a contingent
+P $\land$ $\neg$P = F (by contradiction)\\
+$\neg$Q \hspace{36pt} (By absorption)\\
+\newline
+the proposition depends on the truth value of Q hence it's a contingent
 
 
 \subsection*{c) Q $\implies$ (P $\land$ $\neg$Q)}
@@ -55,7 +56,7 @@ hence, the proposition is a contingent
         \hline
     \end{array}
 \end{displaymath}
-
+%
 As the truth table demonstrates, the truth value of the proposition depends on
 the truth values of P and Q.\\
 Hence, the proposition is a contingent.
@@ -64,9 +65,9 @@ Hence, the proposition is a contingent.
 \section*{Question 2}
 \subsection*{P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ $\neg$Q}
 By De Morgan's laws: P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ ($\neg$P $\land$ Q)\\
-By distributivity:\;\;\;\;\;\;\; P $\lor$ ($\neg$P $\land$ Q) $\equiv$ (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q)\\
-By excluded middle:\;\; (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q) $\equiv$ T $\land$ (P $\lor$ Q)\\
-By Absorption:\;\;\;\;\;\;\;\;\;\; T $\land$ (P $\lor$ Q) $\equiv$ P $\lor$ Q
+By distributivity:\hspace{2em} P $\lor$ ($\neg$P $\land$ Q) $\equiv$ (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q)\\
+By excluded middle:\hspace{5pt} (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q) $\equiv$ T $\land$ (P $\lor$ Q)\\
+By Absorption:\hspace{3em} T $\land$ (P $\lor$ Q) $\equiv$ P $\lor$ Q
 
 \vspace{10pt}
 
@@ -78,29 +79,27 @@ $\forall$x $\exists$n (x $\le$ n $\leq$ x+5 $\land$
 $\land$ (a $\times$ b = n))
 
 \section*{Question 4}
-\par\noindent\parskip 8pt
 let N(x, y) be "x is a neighbour of y"
 
-\par\noindent\parskip 2pt
+\noindent
 \textbf{a) Anna has no neighbours}
-\par\parskip 2pt
+\par\parindent 20pt
 $\neg$($\exists$x.N(x, a))
 
-\par\noindent\parskip 2pt
+\noindent
 \textbf{b) Ben has two neighbours}
-\par\parskip 2pt
+\par\parindent 20pt
 $\exists$x$\exists$y(N(x, b) $\land$ N(y, b) $\land$ x $\neq$ y $\land$
 $\forall$z(N(z, b) $\implies$ (z = x $\lor$ z = y)))
 
-\pagebreak
-\par\noindent\parskip 2pt
+\noindent
 \textbf{c) If somebody is a neighbour of Ben, Ben is also a neighbour of that person}
-\par\parskip 2pt
+\par\parindent 20pt
 $\forall$x(N(x, b) $\implies$ N(b, x))
 
-\par\noindent\parskip 2pt
+\noindent
 \textbf{d) Except for Anna, everyone is the neighbour of someone}
-\par\parskip 2pt
-$\forall$x(x $\neq$ a $\implies$ $\exists$y(N(y, x)))
+\par\parindent 20pt
+$\forall$x(x $\neq$ a $\implies$ $\exists$y(N(x, y)))
 
 \end{document}
