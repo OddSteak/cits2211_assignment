@@ -1,7 +1,12 @@
-\documentclass[a4paper]{article}
+\documentclass[11pt]{article}
 \usepackage[margin=30pt]{geometry}
 \usepackage{amsmath}
 \usepackage{lmodern}
+\usepackage{bm}
+% \usepackage{mathpazo}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 \pagestyle{empty}
 \title{\textbf{CITS2211 Assignment 1}}
@@ -42,7 +47,7 @@ $\neg$Q \hspace{36pt} (By absorption)\\
 the proposition depends on the truth value of Q hence it's a contingent
 
 
-\subsection*{c) Q $\implies$ (P $\land$ $\neg$Q)}
+\subsection*{c) Q $\rightarrow$ (P $\land$ $\neg$Q)}
 
 \begin{displaymath}
     \begin{array}{|c|c|c|c|c|}
@@ -64,13 +69,27 @@ Hence, the proposition is a contingent.
 
 \section*{Question 2}
 \subsection*{P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ $\neg$Q}
-By De Morgan's laws: P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ ($\neg$P $\land$ Q)\\
-By distributivity:\hspace{2em} P $\lor$ ($\neg$P $\land$ Q) $\equiv$ (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q)\\
-By excluded middle:\hspace{5pt} (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q) $\equiv$ T $\land$ (P $\lor$ Q)\\
-By Absorption:\hspace{3em} T $\land$ (P $\lor$ Q) $\equiv$ P $\lor$ Q
 
-\vspace{10pt}
-
+\setlength{\tabcolsep}{1em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.5}% for the vertical padding
+\begin{displaymath}
+    \begin{tabular}{| l | l |}
+        \hline
+        1. P $\lor$ $\neg$ (P $\lor$ $\neg$ Q) & Premise \\
+        \hline
+        2. P $\lor$ ($\neg$ P $\land$ Q) & 1, Demorgan's laws \\
+        \hline
+        3. (P $\lor$ $\neg$P) $\land$ (P $\lor$ Q) & 2, distributivity \\
+        \hline
+        4. T $\land$ (P $\lor$ Q) & 3, excluded middle \\
+        \hline
+        5. P $\lor$ Q & 4, absorption \\
+        \hline
+    \end{tabular}
+\end{displaymath}
+\indent
+5. P $\lor$ Q \\
+\indent
 \emph{Q.E.D.}
 
 \section*{Question 3}
@@ -84,22 +103,105 @@ let N(x, y) be "x is a neighbour of y"
 \noindent
 \textbf{a) Anna has no neighbours}
 \par\parindent 20pt
-$\neg$($\exists$x.N(x, a))
+$\neg$($\exists$\,x.N(x, a))
 
 \noindent
 \textbf{b) Ben has two neighbours}
 \par\parindent 20pt
-$\exists$x$\exists$y(N(x, b) $\land$ N(y, b) $\land$ x $\neq$ y $\land$
-$\forall$z(N(z, b) $\implies$ (z = x $\lor$ z = y)))
+$\exists$\,x\,$\exists$\,y\,(N(x, b) $\land$ N(y, b) $\land$ x $\neq$ y $\land$
+$\forall$\,z\,(N(z, b) $\rightarrow$ (z = x $\lor$ z = y)))
 
 \noindent
 \textbf{c) If somebody is a neighbour of Ben, Ben is also a neighbour of that person}
 \par\parindent 20pt
-$\forall$x(N(x, b) $\implies$ N(b, x))
+$\forall$\,x\,(N(x, b) $\rightarrow$ N(b, x))
 
 \noindent
 \textbf{d) Except for Anna, everyone is the neighbour of someone}
 \par\parindent 20pt
-$\forall$x(x $\neq$ a $\implies$ $\exists$y(N(x, y)))
+$\forall$\,x\,(x $\neq$ a $\rightarrow$ $\exists$y(N(x, y)))
+
+\subsection*{Question 5}
+
+\noindent
+\textbf{a)} \bm{$\displaystyle \frac{P}{P}$}
+
+P $\equiv$ P by rule of identity\\
+\indent
+hence, the inference rule is sound
+\parskip 6mm
+
+\noindent
+\textbf{b)} \bm{$\displaystyle \frac{P}{P \leftrightarrow Q}$}
+
+if Q if false, the axiom is true but the conclusion is false\\
+\indent
+Hence, the inference rule is unsound
+
+\noindent
+\textbf{c)} \bm{$\displaystyle \frac{P \leftrightarrow Q}{P}$}
+
+if P and Q are false, the axiom is true but the conclusion is false\\
+\indent
+Hence, the inference rule is unsound
+
+\noindent
+\textbf{d)} \bm{$\displaystyle \frac{P\;Q}{P \lor Q}$}
+
+From the premise P we can infer P $\lor$ Q by disjunction introduction rule\\
+\indent
+Hence, the inference rule is sound
+
+\pagebreak
+\noindent
+\textbf{e)} \bm{$\displaystyle \frac{P \rightarrow Q \; \neg \neg P}{Q}$}
+
+\setlength{\tabcolsep}{1em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.5}% for the vertical padding
+\begin{displaymath}
+    \begin{tabular}{| l | l |}
+        \hline
+        1. $\neg$$\neg$P & Premise \\
+        \hline
+        2. P $\rightarrow$ Q & Premise \\
+        \hline
+        3. P & 1, double negation \\
+        \hline
+        4. Q & 3, 2, Demorgan's laws\\
+        \hline
+    \end{tabular}
+\end{displaymath}
+
+Hence the rule is sound
+
+\subsection*{Question 6}
+$\forall$x.($\neg$ Q(x) $\lor$ P(x)) $\lor$
+$\exists$ x(Q(x) $\lor$ (P(x) $\land$ R(x)))
+$\rightarrow$ $\exists$x.R(x)
+\setlength{\tabcolsep}{1em} % horizontal padding
+{\renewcommand{\arraystretch}{3} % vertical padding
+\begin{displaymath}
+    \begin{tabular}{| l | l |}
+        \hline
+        1. $\forall x(\neg Q(x) \land P(x))$ & premise \\
+        \hline
+        2. $\exists x(Q(x) \lor (P(x) \land R(x)))$ & premise \\
+        \hline
+        3. $Q(a) \lor (P(a) \land R(a))$ & 2, Exist elimination \\
+        \hline
+        4. $\neg Q(a) \land P(a)$ & 1, Forall elimination\\
+        \hline
+        5. $\neg Q(a)$ & 4, conjunction elimination \\
+        \hline
+        6. $\neg Q(a) \to (P(a) \land R(a))$ & 3, implication law \\
+        \hline
+        7. $P(a) \land R(a)$ & 5, 6, Modus ponens\\
+        \hline
+        8. R(a) & 7, conjunction elimination \\
+        \hline
+        9. $\exists x.R(x)$ & 8, Exists introduction\\
+        \hline
+    \end{tabular}
+\end{displaymath}
 
 \end{document}
