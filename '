@@ -233,7 +233,7 @@ we know that the product and the difference of integers is an integer.
 2p$q\prime$ - $p\prime$q and 2$q\prime$q are integers
 
 \noindent
-Hence, k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
+k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
 which contradicts with our premise that k is a non-squidgy number. \\
 Our assumption that the result is a squidgy number must be false. \\
 Hence, the result of multiplying the difference betweeen a squidgy and a
@@ -247,18 +247,10 @@ and then secondly, prove that if 5x-1 is even then x is odd. \\
 \\
 \textbf{first direction: if x is odd then 5x-1 is even} \\
 \\
-let x be an arbitary odd integer then x is of the form 2k-1
-where k is an integer \\
-x = 2k-1 \\
-5x = 10k - 5 (multiplying both sides by 5) \\
-5x - 1 = 10k - 6 (substracting 1 from both sides) \\
-\hspace*{2.5em}
-=2(5k - 3) (factoring out 2) \\
-\hspace*{2.5em}
-=2n (where n = 5k-3) \\
-which is an odd number.
-
-therefore, for any odd integer x, 5x -1 is an even integer
+let x be an arbitary odd integer then 5x is an odd integer \\
+if 5x is an odd integer then 5x-1 is an even integer \\
+\\
+therefore, for any odd integer x, 5x-1 is an even integer \\
 \\ \\
 \textbf{second direction: if 5x-1 is an even integer then x is an odd integer} \\
 \\
@@ -266,30 +258,18 @@ The contrapositive of the statement is - \\
 if x is not an odd integer then 5x-1 is not an even integer \\
 an integer not being odd implies that the integer is even \\
 and similarly an integer not begin even implies that the integer is odd \\
-Hence, we need to prove that
+Hence, we can rewrite the statement as - \\
 if x is an even integer then 5x-1 is an odd integer \\
 \\
-let x be an arbitary even integer then x is of the form 2n
-where n is an integer \\
+let x be an arbitary even integer then x is of the form 2n where n is an integer \\
 x = 2n \\
-5x = 10n (multiplying both sides by 5)\\
-5x - 1 = 10n - 1 (substracting 1 from both sides) \\
-\hspace*{2.5em}
-= 2 (5n) - 1 (factoring out 2) \\
-\hspace*{2.5em}
-= 2k - 1 (where k is 5n) \\
-\\
+5x = 10n \\
+5x - 1 = 10n - 1 \\
+\hspace{4em} = 2 (5n) - 1 \\
+       = 2k - 1 where k is 5n
+
 Hence, 5x - 1 is of the form 2k - 1 which is an odd number \\
 therefore, for any even integer x, 5x - 1 is an odd integer
-%
-\textbf{Conclusion}
-therefore, we have proved that if if x is odd, then 5x-1 is even \\
-and if 5x-1 is even then x is odd. \\
-Hence, it follows that x is odd if and only if 5x-1 is even
-
-\subsection*{Question 9}
-Skill issues
-
-\subsection*{Question 10}
 
 \end{document}
+
