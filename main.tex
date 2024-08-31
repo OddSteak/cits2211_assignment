@@ -1,3 +1,4 @@
+% TODO: definitions and clean up 10
 \documentclass[11pt]{article}
 \usepackage[margin=30pt]{geometry}
 \usepackage{amsmath}
@@ -21,51 +22,21 @@
 \section*{Question 1}
 
 \subsection*{a) P $\lor$ (Q $\lor$ $\neg$P)}
-
-\begin{displaymath}
-    \begin{array}{|c c| c | c | c |}
-        \hline
-        P & Q & \neg P & Q \lor \neg P & P \lor (Q \lor \neg P)\\
-        \hline
-        T & T & F & T & T\\
-        T & F & F & F & T\\
-        F & T & T & T & T\\
-        F & F & T & T & T\\
-        \hline
-    \end{array}
-\end{displaymath}
-%
-As the truth table demonstrates, the proposition is a tautology since
-it's always true regardless of the truth values of Q or P
-
+is a tautology because if P is true then so is $P \lor (Q \lor \neg P)$ \\
+if P is false $Q \lor \neg P$ is true and thus, $P \lor (Q \lor \neg P)$ is true
 
 \subsection*{b) (P $\land$ $\neg$P) $\lor$ $\neg$Q}
 
-P $\land$ $\neg$P = F (by contradiction)\\
-$\neg$Q \hspace{36pt} (By absorption)\\
+P $\land$ $\neg$P = F (by contradiction) \\
+$(P \land \neg P) \lor \neg Q = \neg Q$ (by absorption) \\
 \newline
-the proposition depends on the truth value of Q hence it's a contingent
+The proposition is a contingent because it depends on the truth value of Q
 
 
 \subsection*{c) Q $\rightarrow$ (P $\land$ $\neg$Q)}
-
-\begin{displaymath}
-    \begin{array}{|c|c|c|c|c|}
-        \hline
-        P & Q & \neg Q & P \land \neg Q & Q \rightarrow (P \land \neg Q) \\
-        \hline
-        T & T & F & F & F \\
-        T & F & T & T & T \\
-        F & T & F & F & F \\
-        F & F & T & F & T \\
-        \hline
-    \end{array}
-\end{displaymath}
-%
-As the truth table demonstrates, the truth value of the proposition depends on
-the truth values of P and Q.\\
-Hence, the proposition is a contingent.
-
+if Q is true then, $(P \land \neg Q)$ is false, making the proposition false, \\
+and if Q is false the proposition is true \\
+The proposition is a contingent because it depends on the truth value of Q
 
 \section*{Question 2}
 \subsection*{P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ $\neg$Q}
@@ -205,19 +176,20 @@ $\rightarrow$ $\exists$x.R(x)
 \end{displaymath}
 
 \subsection*{Question 7}
-Assuming the difference beetween a squidgy and a non-squidgy number
+Assume that the  difference beetween a squidgy and a non-squidgy number \\
 multiplied by 2 produces a squidgy number
 
 \noindent
-we have a non-squidgy number k and a squidgy number l, \\
-l can be represented as $\frac{p}{q}$ where p and q are integers
+let k be a non-squidgy number and l be a squidgy number \\
+If l is a squidgy number there exists integers p and q such that \\
+l = $\frac{p}{q}$
 
 \noindent
 {\begin{displaymath}
     (\frac{p}{q} - k) * 2 = \frac{p\prime}{q\prime}
 \end{displaymath}
 }
-where $p\prime$ and $q\prime$ are integers (by the assumption that the result is a squidgy number)
+where $p\prime$ and $q\prime$ are integers (by our assumption that the result is a squidgy number)
 
 \noindent
 {\begin{displaymath}
@@ -227,16 +199,14 @@ where $p\prime$ and $q\prime$ are integers (by the assumption that the result is
 By arithmetic
 
 \noindent
-we know that the product and the difference of integers is an integer.
-
-\noindent
 2p$q\prime$ - $p\prime$q and 2$q\prime$q are integers
 
 \noindent
-Hence, k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
-which contradicts with our premise that k is a non-squidgy number. \\
+k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
+therefore, we have a contradiction as k is a non-squidgy number yet \\
+can be represented as a fraction with integers as numerator and denominator. \\
 Our assumption that the result is a squidgy number must be false. \\
-Hence, the result of multiplying the difference betweeen a squidgy and a
+Therefore, the result of multiplying the difference betweeen a squidgy and a
 non-squidgy number by 2 is a non-squidgy number \\
 Q.E.D.
 
@@ -249,13 +219,13 @@ and then secondly, prove that if 5x-1 is even then x is odd. \\
 \\
 let x be an arbitary odd integer then x is of the form 2k-1
 where k is an integer \\
-x = 2k-1 \\
-5x = 10k - 5 (multiplying both sides by 5) \\
-5x - 1 = 10k - 6 (substracting 1 from both sides) \\
-\hspace*{2.5em}
-=2(5k - 3) (factoring out 2) \\
-\hspace*{2.5em}
-=2n (where n = 5k-3) \\
+\begin{align*}
+    x &= 2k-1 \\
+    5x &= 10k - 5 \text{  (multiplying both sides by 5)} \\
+    5x - 1 &= 10k - 6 \text{  (substracting 1 from both sides)} \\
+    &=2(5k - 3) \text{  (factoring out 2)} \\
+    &=2n \text{(where n = 5k-3)} \\
+\end{align*}
 which is an odd number.
 
 therefore, for any odd integer x, 5x -1 is an even integer
@@ -264,32 +234,97 @@ therefore, for any odd integer x, 5x -1 is an even integer
 \\
 The contrapositive of the statement is - \\
 if x is not an odd integer then 5x-1 is not an even integer \\
-an integer not being odd implies that the integer is even \\
-and similarly an integer not begin even implies that the integer is odd \\
-Hence, we need to prove that
+We need to prove that
 if x is an even integer then 5x-1 is an odd integer \\
 \\
 let x be an arbitary even integer then x is of the form 2n
 where n is an integer \\
-x = 2n \\
-5x = 10n (multiplying both sides by 5)\\
-5x - 1 = 10n - 1 (substracting 1 from both sides) \\
-\hspace*{2.5em}
-= 2 (5n) - 1 (factoring out 2) \\
-\hspace*{2.5em}
-= 2k - 1 (where k is 5n) \\
-\\
+\begin{align*}
+    x &= 2n \\
+    5x &= 10n \text{(multiplying both sides by 5)} \\
+    5x - 1 &= 10n - 1 \text{(substracting 1 from both sides)}  \\
+    &= 2(5n)  - 1 \text{(factoring out 2)} \\
+    &= 2k - 1 \text{(where k is 5n)}
+\end{align*}
+
 Hence, 5x - 1 is of the form 2k - 1 which is an odd number \\
 therefore, for any even integer x, 5x - 1 is an odd integer
-%
-\textbf{Conclusion}
-therefore, we have proved that if if x is odd, then 5x-1 is even \\
+
+\noindent
+\textbf{Conclusion} \\
+therefore, we have proved that if x is odd, then 5x-1 is even \\
 and if 5x-1 is even then x is odd. \\
-Hence, it follows that x is odd if and only if 5x-1 is even
+It follows that x is odd if and only if 5x-1 is even
 
 \subsection*{Question 9}
-Skill issues
+Skill issue
 
 \subsection*{Question 10}
+\underline{\textbf{Base cases}}: \\
+in the formula a,
+A($\phi$) = 1 and B($\phi$) = 0 \\
+and in the formula baa,
+A($\phi$) = 2 and B($\phi$) = 1
+
+hence, A($\phi$) $\geq$ 2B($\phi$) holds for the base cases
+
+\noindent
+\underline{\textbf{Inductive case $\psi$a$\phi$}}: \\
+by the inductive Hypothesis, we can assume that
+$A(\psi) \geq 2B(\psi) \text{ and } A(\phi) \geq 2B(\phi)$
+
+\begin{align*}
+    A(\psi a \phi) &= 1 + A(\psi) + A(\phi) \\
+    &\geq 1 + 2B(\psi) + 2B(\phi) \\
+    &= 1 + 2B(\psi \phi) \\
+    &= 1 + 2B(\psi a \phi) \\
+    &\geq 2B(\psi a \phi)
+\end{align*}
+
+\noindent
+\underline{\textbf{Inductive case aba$\psi$}}: \\
+by the inductive Hypothesis, we can assume that
+$A(\psi) \geq 2B(\psi)$
+
+\begin{align*}
+    A(aba \psi) &= 2 + A(\psi) \\
+    &\geq 2 + 2B(\psi) \\
+    &= 2B(aba) + 2B(\psi) \text{ (since 2B(aba) = 2)} \\
+    &= 2B(aba\psi)
+\end{align*}
+
+\subsection*{Question 11}
+(i) (A - B - C) $\cup$ (B $\cap$ C) \\ \\
+(ii) (A $\cup$ B $\cup$ C) - ((A $\cap$ B) $\cup$ (A $\cap$ C) $\cup$ (B $\cap$ C))
+
+% TODO review this
+\subsection*{Question 12}
+(a) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
+%
+I will disprove the given proposition with a counter-example: \\
+let X = \{1, 2, 3, 4\} \\
+Suppose R = \{(1, 2)(2, 3)(3, 4)(4, 4)\} and S = \{(2, 1)(3, 2)(4, 3)(4, 4)\} \\
+then T = \{(1, 1)(2, 2)(3, 3)(4, 4)(3, 4)(4, 3)\} \\
+here T is reflexive but R and S are not.
+
+\noindent
+(b) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
+%
+For any arbitary element x in set X, \\
+(x, x) $\in$ R and (x, x) $\in$ S (by defination of reflexive relations) \\
+(x, x) belongs to T as well (by definition of T) \\
+we have proved that for any arbitary element x in X, (x, x) $\in$ T \\
+Therefore, if R and S are reflexive then so is T. \\
+Q.E.D.
+
+\noindent
+(c) Definition: $\forall a, b \in A. ((a, b) \in R \rightarrow (b, a) \in R$
+
+\noindent
+I will disprove the given proposition with a counter-example: \\
+Suppose R = \{(1, 2)(2, 1)(3, 4)(4, 3)(1, 3)(3, 1)\} and S = \{(5, 6)(6, 5)(4, 3)(3, 4)\} \\
+Then T = \{(3, 3)(4, 4)(1, 4)\} \\
+here, R and S are symmetric but T is not since T contains (1, 4) but not (4, 1)
+Therefore, The statement is false
 
 \end{document}
