@@ -22,7 +22,7 @@
 \section*{Question 1}
 
 \subsection*{a) P $\lor$ (Q $\lor$ $\neg$P)}
-is a tautology because if P is true then so is $P \lor (Q \lor \neg P)$ \\
+The statement is a tautology because if P is true then so is $P \lor (Q \lor \neg P)$ \\
 if P is false $Q \lor \neg P$ is true and thus, $P \lor (Q \lor \neg P)$ is true
 
 \subsection*{b) (P $\land$ $\neg$P) $\lor$ $\neg$Q}
@@ -305,7 +305,8 @@ I will disprove the given proposition with a counter-example: \\
 let X = \{1, 2, 3, 4\} \\
 Suppose R = \{(1, 2)(2, 3)(3, 4)(4, 4)\} and S = \{(2, 1)(3, 2)(4, 3)(4, 4)\} \\
 then T = \{(1, 1)(2, 2)(3, 3)(4, 4)(3, 4)(4, 3)\} \\
-here T is reflexive but R and S are not.
+Here, R and S are not reflexive since (1, 1) $\notin$ R and (1, 1) $\notin$ S \\
+but T is reflexive
 
 \noindent
 (b) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
@@ -324,7 +325,7 @@ Q.E.D.
 I will disprove the given proposition with a counter-example: \\
 Suppose R = \{(1, 2)(2, 1)(3, 4)(4, 3)(1, 3)(3, 1)\} and S = \{(5, 6)(6, 5)(4, 3)(3, 4)\} \\
 Then T = \{(3, 3)(4, 4)(1, 4)\} \\
-here, R and S are symmetric but T is not since T contains (1, 4) but not (4, 1)
-Therefore, The statement is false
+here, R and S are symmetric \\
+but T is not symmetric because (1, 4) $\in$ T but (4, 1) $\notin$ T \\
 
 \end{document}
