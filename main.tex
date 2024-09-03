@@ -1,4 +1,3 @@
-% TODO: definitions and clean up 10
 \documentclass[11pt]{article}
 \usepackage[margin=30pt]{geometry}
 \usepackage{amsmath}
@@ -20,10 +19,21 @@
 \thispagestyle{empty}
 
 \section*{Question 1}
-
+\textbf{Definitions:} \\ \\
+A \textbf{Tautology} is a compound proposition which is true under all possible
+assignments of truth values of it's identifiers\\
+\\
+A \textbf{contradiction} is a compound proposition which is
+false under all possible assignments of truth values to its identifiers\\
+\\
+A \textbf{contingent} proposition is one which is neither a tautology
+nor a contradiction.
+%
 \subsection*{a) P $\lor$ (Q $\lor$ $\neg$P)}
 The statement is a tautology because if P is true then so is $P \lor (Q \lor \neg P)$ \\
-if P is false $Q \lor \neg P$ is true and thus, $P \lor (Q \lor \neg P)$ is true
+if P is false then, $Q \lor \neg P$ is true \\
+Therefore, $P \lor (Q \lor \neg P)$ is true\\\\
+The proposition is a tautology because it's true regardless of the truth values of P or Q
 
 \subsection*{b) (P $\land$ $\neg$P) $\lor$ $\neg$Q}
 
@@ -35,7 +45,7 @@ The proposition is a contingent because it depends on the truth value of Q
 
 \subsection*{c) Q $\rightarrow$ (P $\land$ $\neg$Q)}
 if Q is true then, $(P \land \neg Q)$ is false, making the proposition false, \\
-and if Q is false the proposition is true \\
+and if Q is false the proposition is true \\ \\
 The proposition is a contingent because it depends on the truth value of Q
 
 \section*{Question 2}
@@ -64,9 +74,9 @@ The proposition is a contingent because it depends on the truth value of Q
 \emph{Q.E.D.}
 
 \section*{Question 3}
-$\forall$x $\exists$n (x $\le$ n $\leq$ x+5 $\land$
-($\exists$a $\exists$b (a $\neq$ n) $\land$ (a $\neq$ 1) $\land$ (b $\neq$ n) $\land$ (b $\neq$ 1)
-$\land$ (a $\times$ b = n))
+$\forall$n $\exists$x (n $\le$ x $\leq$ n+5 $\land$
+($\exists$a $\exists$b (a $\neq$ x) $\land$ (b $\neq$ x)
+$\land$ (a $\times$ b = x))
 
 \section*{Question 4}
 let N(x, y) be "x is a neighbour of y"
@@ -93,6 +103,9 @@ $\forall$\,x\,(N(x, b) $\rightarrow$ N(b, x))
 $\forall$\,x\,(x $\neq$ a $\rightarrow$ $\exists$y(N(x, y)))
 
 \subsection*{Question 5}
+An inference rule is sound if any assignment of truth values that
+makes all the antecedents of the rule true must also make the
+consequent true.
 
 \noindent
 \textbf{a)} \bm{$\displaystyle \frac{P}{P}$}
@@ -105,14 +118,14 @@ hence, the inference rule is sound
 \noindent
 \textbf{b)} \bm{$\displaystyle \frac{P}{P \leftrightarrow Q}$}
 
-if Q if false, the axiom is true but the conclusion is false\\
+Counter example: if Q if false, the axiom is true but the conclusion is false\\
 \indent
 Hence, the inference rule is unsound
 
 \noindent
 \textbf{c)} \bm{$\displaystyle \frac{P \leftrightarrow Q}{P}$}
 
-if P and Q are false, the axiom is true but the conclusion is false\\
+Counter example: if P and Q are false, the axiom is true but the conclusion is false\\
 \indent
 Hence, the inference rule is unsound
 
@@ -123,7 +136,6 @@ From the premise P we can infer P $\lor$ Q by disjunction introduction rule\\
 \indent
 Hence, the inference rule is sound
 
-\pagebreak
 \noindent
 \textbf{e)} \bm{$\displaystyle \frac{P \rightarrow Q \; \neg \neg P}{Q}$}
 
@@ -143,14 +155,14 @@ Hence, the inference rule is sound
     \end{tabular}
 \end{displaymath}
 
-Hence the rule is sound
+Hence the inference rule is sound
 
 \subsection*{Question 6}
 $\forall$x.($\neg$ Q(x) $\lor$ P(x)) $\lor$
 $\exists$ x(Q(x) $\lor$ (P(x) $\land$ R(x)))
 $\rightarrow$ $\exists$x.R(x)
 \setlength{\tabcolsep}{1em} % horizontal padding
-{\renewcommand{\arraystretch}{3} % vertical padding
+{\renewcommand{\arraystretch}{2} % vertical padding
 \begin{displaymath}
     \begin{tabular}{| l | l |}
         \hline
@@ -171,6 +183,8 @@ $\rightarrow$ $\exists$x.R(x)
         8. R(a) & 7, conjunction elimination \\
         \hline
         9. $\exists x.R(x)$ & 8, Exists introduction\\
+        \hline
+        Q.E.D. & \\
         \hline
     \end{tabular}
 \end{displaymath}
@@ -193,24 +207,24 @@ where $p\prime$ and $q\prime$ are integers (by our assumption that the result is
 
 \noindent
 {\begin{displaymath}
-    k = \frac{2pq\prime - p\prime q}{2 q\prime q}
+    k = \frac{2pq\prime - p\prime q}{2 q\prime q} \text{ (By arithmetic)}
 \end{displaymath}
 }
-By arithmetic
 
 \noindent
 2p$q\prime$ - $p\prime$q and 2$q\prime$q are integers
 
 \noindent
 k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
-therefore, we have a contradiction as k is a non-squidgy number yet \\
-can be represented as a fraction with integers as numerator and denominator. \\
+therefore, we have a contradiction as k is a non-squidgy number yet, \\
+can be represented as a fraction of integers \\
 Our assumption that the result is a squidgy number must be false. \\
 Therefore, the result of multiplying the difference betweeen a squidgy and a
 non-squidgy number by 2 is a non-squidgy number \\
 Q.E.D.
 
 \subsection*{Question 8}
+Definition: even numbers are divisible by 2 while odd numbers are not. \\ \\
 this is a bidirection proof so firstly, we prove that if x is odd
 then 5x-1 is even, \\
 and then secondly, prove that if 5x-1 is even then x is odd. \\
@@ -224,10 +238,9 @@ where k is an integer \\
     5x &= 10k - 5 \text{  (multiplying both sides by 5)} \\
     5x - 1 &= 10k - 6 \text{  (substracting 1 from both sides)} \\
     &=2(5k - 3) \text{  (factoring out 2)} \\
-    &=2n \text{(where n = 5k-3)} \\
+    &=2n \text{  (where n = 5k-3)} \\
 \end{align*}
-which is an odd number.
-
+5x-1 is of the form 2n which is an even number.\\
 therefore, for any odd integer x, 5x -1 is an even integer
 \\ \\
 \textbf{second direction: if 5x-1 is an even integer then x is an odd integer} \\
@@ -241,13 +254,14 @@ let x be an arbitary even integer then x is of the form 2n
 where n is an integer \\
 \begin{align*}
     x &= 2n \\
-    5x &= 10n \text{(multiplying both sides by 5)} \\
-    5x - 1 &= 10n - 1 \text{(substracting 1 from both sides)}  \\
-    &= 2(5n)  - 1 \text{(factoring out 2)} \\
-    &= 2k - 1 \text{(where k is 5n)}
+    5x &= 10n \text{  (multiplying both sides by 5)} \\
+    5x - 1 &= 10n - 1 \text{  (substracting 1 from both sides)}  \\
+    &= 2(5n)  - 1 \text{  (factoring out 2)} \\
+    &= 2k - 1 \text{  (where k is 5n)}
 \end{align*}
 
-Hence, 5x - 1 is of the form 2k - 1 which is an odd number \\
+\noindent
+5x - 1 is of the form 2k - 1 which is an odd number \\
 therefore, for any even integer x, 5x - 1 is an odd integer
 
 \noindent
@@ -256,6 +270,7 @@ therefore, we have proved that if x is odd, then 5x-1 is even \\
 and if 5x-1 is even then x is odd. \\
 It follows that x is odd if and only if 5x-1 is even
 
+% TODO q9
 \subsection*{Question 9}
 Skill issue
 
@@ -292,12 +307,14 @@ $A(\psi) \geq 2B(\psi)$
     &= 2B(aba) + 2B(\psi) \text{ (since 2B(aba) = 2)} \\
     &= 2B(aba\psi)
 \end{align*}
-
+\\
+Therefore, $\forall \phi . A(\phi) \geq 2B(\phi)$\\
+Q.E.D
 \subsection*{Question 11}
-(i) (A - B - C) $\cup$ (B $\cap$ C) \\ \\
-(ii) (A $\cup$ B $\cup$ C) - ((A $\cap$ B) $\cup$ (A $\cap$ C) $\cup$ (B $\cap$ C))
+(i) $(A \cap \neg B \cap \neg C) \cup (B \cap C)$ \\ \\
+(ii) $(A \cap \neg B \cap \neg C) \cup (B \cap \neg A \cap \neg C) \cup (C \cap \neg A \cap \neg B)$
 
-% TODO review this
+% TODO simplify examples
 \subsection*{Question 12}
 (a) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
 %
@@ -319,7 +336,7 @@ Therefore, if R and S are reflexive then so is T. \\
 Q.E.D.
 
 \noindent
-(c) Definition: $\forall a, b \in A. ((a, b) \in R \rightarrow (b, a) \in R$
+(c) Definition: R is symmetric iff $\forall a, b \in X. ((a, b) \in R \rightarrow (b, a) \in R)$
 
 \noindent
 I will disprove the given proposition with a counter-example: \\
