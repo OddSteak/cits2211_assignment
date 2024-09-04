@@ -79,7 +79,7 @@ $\forall$n $\exists$x (n $\le$ x $\leq$ n+5 $\land$
 $\land$ (a $\times$ b = x))
 
 \section*{Question 4}
-let N(x, y) be "x is a neighbour of y"
+let N(x, y) be the predicate "x is a neighbour of y"
 
 \noindent
 \textbf{a) Anna has no neighbours}
@@ -103,7 +103,7 @@ $\forall$\,x\,(N(x, b) $\rightarrow$ N(b, x))
 $\forall$\,x\,(x $\neq$ a $\rightarrow$ $\exists$y(N(x, y)))
 
 \subsection*{Question 5}
-An inference rule is sound if any assignment of truth values that
+An inference rule is sound iff assignment of truth values that
 makes all the antecedents of the rule true must also make the
 consequent true.
 
@@ -270,9 +270,44 @@ therefore, we have proved that if x is odd, then 5x-1 is even \\
 and if 5x-1 is even then x is odd. \\
 It follows that x is odd if and only if 5x-1 is even
 
-% TODO q9
 \subsection*{Question 9}
-Skill issue
+let P(n) be "there exists an ordering of players $p_1, p_2...p_n$
+such that $p_i$ defeats $p_{i+1}$ for all $i \in 1, 2, ... n-1$"\\\\
+%
+\underline{\textbf{Base case}}: \\
+when k = 1, the 1 player can be arranged as "$p_1$" since no matches are played \\
+Therefore, P(1) is true.
+\\ \\
+\underline{\textbf{Inductive case}}: \\
+We want to show that $P(K) \rightarrow P(K+1)$ for some arbitary $k \geq 1$ \\
+\\
+\textbf{Inductive hypothesis}: \\
+We can Assume that P(K) holds for an arbitary $K \geq 1$ \\
+\\
+\textbf{Inductive step:} \\
+Now, we need to show that P(K+1) holds given the inductive hypothesis \\
+\\
+We can arrange the first K players as $p_1, p_2, \ldots, p_k$
+such that $p_i$ defeats $p_{i+1}$ for all
+$i = 1, 2, \ldots, k-1$.\\
+\\
+Consider adding a new player $p_{k+1}$. Since $p_{k+1}$\\
+plays a match against every other player, it either wins or loses each match.\\
+\\
+Find a player $pj$ among the existing $k$ players such that:\\
+$p_{j}$ defeats $p_{k+1}$ and \\
+$p_{k+1}$ defeats $p_{j+1}$,
+or if $j = k$, $p_{k+1}$ defeats no player after $p_j$.\\
+\\
+Insert $p_{k+1}$ between $p_j$ and $p_{j+1}$, resulting in the new sequence:\\
+$p1, p_2, \ldots, p_j, p_{k+1}, p_{j+1}, \ldots, p_k$.\\
+In this new order:\\
+$p_i$ defeats $p_{i+1}$ for all $i = 1, 2, \ldots, j-1$.\\
+$p_j$ defeats $p_{k+1}$.\\
+$p_{k+1}$ defeats $p_{j+1}$.\\
+$p_i$ defeats $p_{i+1}$ for all $i = j+1, j+2, \ldots, k$.\\
+\\
+Thus, we have arranged $k+1$ players in the required order.\\
 
 \subsection*{Question 10}
 \underline{\textbf{Base cases}}: \\
@@ -311,6 +346,9 @@ $A(\psi) \geq 2B(\psi)$
 Therefore, $\forall \phi . A(\phi) \geq 2B(\phi)$\\
 Q.E.D
 \subsection*{Question 11}
+\underline{\textbf{Definitions}}:\\\\
+\textbf{Union}: The union of sets A and B is a set containing all elements appearing in either A or B or both.\\
+\textbf{Intersection}: The intersection of sets A and B is a set containing all elements appearing in both A and B\\
 (i) $(A \cap \neg B \cap \neg C) \cup (B \cap C)$ \\ \\
 (ii) $(A \cap \neg B \cap \neg C) \cup (B \cap \neg A \cap \neg C) \cup (C \cap \neg A \cap \neg B)$
 
