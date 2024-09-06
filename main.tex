@@ -208,19 +208,19 @@ l = $\frac{p}{q}$
 
 \noindent
 {\begin{displaymath}
-    (\frac{p}{q} - k) * 2 = \frac{p^{\prime}}{q^{\prime}}
+    (\frac{p}{q} - k) * 2 = \frac{p\prime}{q\prime}
 \end{displaymath}
 }
-where $p^{\prime}$ and $q^{\prime}$ are integers (by our assumption that the result is a squidgy number)
+where $p\prime$ and $q\prime$ are integers (by our assumption that the result is a squidgy number)
 
 \noindent
 {\begin{displaymath}
-    k = \frac{2pq^{\prime} - p^{\prime} q}{2 q^{\prime} q} \text{ (By arithmetic)}
+    k = \frac{2pq\prime - p\prime q}{2 q\prime q} \text{ (By arithmetic)}
 \end{displaymath}
 }
 
 \noindent
-2p$q^{\prime}$ - $p^{\prime}$q and 2$q^{\prime}$q are integers
+2p$q\prime$ - $p\prime$q and 2$q\prime$q are integers
 
 \noindent
 We showed that k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
@@ -246,9 +246,9 @@ where k is an integer \\
     5x &= 10k - 5 \text{  (multiplying both sides by 5)} \\
     5x - 1 &= 10k - 6 \text{  (substracting 1 from both sides)} \\
     &=2(5k - 3) \text{  (factoring out 2)} \\
-    &=2 k^{\prime} \text{  (where $k^{\prime}$ = 5k-3)} \\
+    &=2 k \prime \text{  (where $k \prime$ = 5k-3)} \\
 \end{align*}
-5x-1 is of the form $2 k^{\prime}$ which is an even number.\\
+5x-1 is of the form $2 k \prime$ which is an even number.\\
 therefore, for any odd integer x, 5x -1 is an even integer
 
 \noindent
@@ -266,11 +266,11 @@ where k is an integer \\
     5x &= 10k \text{  (multiplying both sides by 5)} \\
     5x - 1 &= 10k - 1 \text{  (substracting 1 from both sides)}  \\
     &= 2(5k)  - 1 \text{  (factoring out 2)} \\
-    &= 2k^{\prime} - 1 \text{  (where $k^{\prime}$ = 5k)}
+    &= 2k\prime - 1 \text{  (where $k\prime$ = 5k)}
 \end{align*}
 
 \noindent
-5x - 1 is of the form $2k^{\prime} - 1$ which is an odd number \\
+5x - 1 is of the form $2k\prime - 1$ which is an odd number \\
 therefore, for any even integer x, 5x - 1 is an odd integer
 
 \noindent
@@ -307,15 +307,12 @@ Now, we need to add a new player $p_{k+1}$. Since $p_{k+1}$
 plays a match against every other player, it either wins or loses each match.\\
 
 \noindent
-\textbf{Case 1:}
-if $p_{k+1}$ beat all other players it can be inserted at the front of the arrangement.
-"$p_{k+1}, p_1, p_2 \ldots p_{k}$" will satisfy the condition \\
+if $p_{k+1}$ beat all other players it can be inserted at the front.\\
+The arrangement "$p_{k+1}, p_1, p_2 \ldots p_{k}$" will satisfy the condition \\
 \\
-\textbf{Case 2:}
-if $p_{k+1}$ loses to all other players it can be inserted at the end of the arrangement.
+Similarly, if $p_{k+1}$ loses to all other players it can be inserted at the end of the arrangement.\\
 "$p_1, p_2 \ldots p_{k}, p_{k+1}$" will satisfy the condition\\
 \\
-\textbf{Case 3:}
 Now, we will consider the final case, if $p_{k+1}$ defeated some players and lost to others.\\
 Find a player $p_j$ among the existing $k$ players such that
 $p_{j}$ defeats $p_{k+1}$ and $p_{k+1}$ defeats $p_{j+1}$ \\
@@ -380,7 +377,7 @@ Q.E.D
 (ii) $(A \cap \neg B \cap \neg C) \cup (B \cap \neg A \cap \neg C) \cup (C \cap \neg A \cap \neg B)$
 
 \subsection*{Question 12}
-(a) Definition: A relation R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
+(a) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
 %
 I will disprove the given proposition with a counter-example: \\
 let X = \{1, 2, 3, 4\} \\
@@ -390,7 +387,7 @@ Here, R and S are not reflexive since $1 \in X$ but (1, 1) $\notin$ R and (1, 1)
 but T is reflexive since $\forall x \in X, T(x, x)$
 
 \noindent
-(b) Definition: A relation R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
+(b) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
 %
 For any arbitary element x in set X, \\
 (x, x) $\in$ R and (x, x) $\in$ S (by defination of reflexive relations) \\
@@ -400,7 +397,7 @@ Therefore, if R and S are reflexive then so is T. \\
 Q.E.D.
 
 \noindent
-(c) Definition: A relation R is symmetric iff $\forall a, b \in X. ((a, b) \in R \rightarrow (b, a) \in R)$
+(c) Definition: R is symmetric iff $\forall a, b \in X. ((a, b) \in R \rightarrow (b, a) \in R)$
 
 \noindent
 I will disprove the given proposition with a counter-example: \\
