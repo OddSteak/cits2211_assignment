@@ -274,6 +274,7 @@ where k is an integer \\
 5x - 1 is of the form $2k^{\prime} - 1$ which is an odd number \\
 therefore, for any even integer x, 5x - 1 is an odd integer
 
+\newpage
 \noindent
 \textbf{Conclusion} \\
 therefore, we have proved that if x is odd, then 5x-1 is even \\
@@ -317,13 +318,11 @@ if $p_{k+1}$ loses to all other players it can be inserted at the end of the arr
 "$p_1, p_2 \ldots p_{k}, p_{k+1}$" will satisfy the condition\\
 \\
 \textbf{Case 3:}
-Now, we will consider the final case, if $p_{k+1}$ defeated some players and lost to others.\\
+If $p_{k+1}$ defeated some players and lost to others.\\
 Find a player $p_j$ among the existing $k$ players such that
 $p_{j}$ defeats $p_{k+1}$ and $p_{k+1}$ defeats $p_{j+1}$ \\
 \\
-We know that such a value of j exists because the arrangement includes
-players who beat $p_{k+1}$ and players who lost to $p_{k+1}$
-so there must be a point where two such players are adjacent. \\
+We will consider the case where such a value cannot be found in case 4\\
 \\
 Insert $p_{k+1}$ between $p_j$ and $p_{j+1}$, resulting in the new sequence:\\
 $p_1, p_2, \ldots, p_j, p_{k+1}, p_{j+1}, \ldots, p_k$.\\
@@ -333,6 +332,19 @@ $p_j$ defeats $p_{k+1}$.\\
 $p_{k+1}$ defeats $p_{j+1}$.\\
 $p_i$ defeats $p_{i+1}$ for all $i = j+1, j+2, \ldots, k$.\\
 \\
+\textbf{Case 4:}
+The only possible arrangement where the value j cannot be found
+in case 3 is when all the players $p_{k+1}$
+beat are at the front of the arrangement
+and all the players he lost to are at the end.
+
+\noindent
+In this case $p_{k+1}$ can be inserted at the front of the arrangement
+The resulting arrangement $p_{k+1}, p_1, p_2 \ldots p_k$
+satisfies the condition because $p_{k+1}$ beat $p_1$,
+$p_1$ beat $p_2$ and so on.
+
+\noindent
 Thus, we have arranged $k+1$ players such that $p_i$ defeats $p_{i+1}$
 for all $i \in 1, 2, \ldots k$\\
 Q.E.D.
