@@ -1,55 +1,62 @@
 \documentclass[11pt]{article}
-\usepackage[margin=30pt]{geometry}
+% \usepackage[margin=40pt]{geometry}
+\usepackage[a4paper, margin=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{lmodern}
 \usepackage{bm}
 % \usepackage{mathpazo}
-\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
-\pagestyle{empty}
+% \pagestyle{empty}
 \title{\textbf{CITS2211 Assignment 1}}
-\author{Baasil Siddiqui}
+\author{Name: Baasil Siddiqui \\ Student Id: 23895849}
 \date{}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
 
 \begin{document}
 \parskip 2mm
 \maketitle
-\thispagestyle{empty}
+\thispagestyle{fancy}
 
 \section*{Question 1}
-\textbf{Definitions:} \\ \\
 A \textbf{Tautology} is a compound proposition which is true under all possible
 assignments of truth values of it's identifiers\\
 \\
 A \textbf{contradiction} is a compound proposition which is
-false under all possible assignments of truth values to its identifiers\\
+false under all possible assignments of truth values of its identifiers\\
 \\
 A \textbf{contingent} proposition is one which is neither a tautology
 nor a contradiction.
 %
 \subsection*{a) P $\lor$ (Q $\lor$ $\neg$P)}
 The statement is a tautology because if P is true then so is $P \lor (Q \lor \neg P)$ \\
-if P is false then, $Q \lor \neg P$ is true \\
-Therefore, $P \lor (Q \lor \neg P)$ is true\\\\
-The proposition is a tautology because it's true regardless of the truth values of P or Q
+if P is false then, $Q \lor \neg P$ is true. Therefore, $P \lor (Q \lor \neg P)$ is true\\\\
+The proposition is a tautology because it's true under all
+possible assignments of the truth values of P or Q
 
 \subsection*{b) (P $\land$ $\neg$P) $\lor$ $\neg$Q}
 
-P $\land$ $\neg$P = F (by contradiction) \\
-$(P \land \neg P) \lor \neg Q = \neg Q$ (by absorption) \\
+$(P \land \neg P) \lor \neg Q \equiv F \lor \neg Q$ (by contradiction) \\
+$F \lor \neg Q \equiv \neg Q$ (by absorption) \\
 \newline
 The proposition is a contingent because it depends on the truth value of Q
 
 
 \subsection*{c) Q $\rightarrow$ (P $\land$ $\neg$Q)}
-if Q is true then, $(P \land \neg Q)$ is false, making the proposition false, \\
-and if Q is false the proposition is true \\ \\
+if Q is true then, $(P \land \neg Q)$ is false, making the implication false, \\
+and if Q is false the implication is true \\
+\\
 The proposition is a contingent because it depends on the truth value of Q
 
 \section*{Question 2}
-\subsection*{P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ $\neg$Q}
+\subsection*{P $\lor$ $\neg$(P $\lor$ $\neg$Q) $\equiv$ P $\lor$ Q}
 
 \setlength{\tabcolsep}{1em} % for the horizontal padding
 {\renewcommand{\arraystretch}{1.5}% for the vertical padding
@@ -76,7 +83,7 @@ The proposition is a contingent because it depends on the truth value of Q
 \section*{Question 3}
 $\forall$n $\exists$x (n $\le$ x $\leq$ n+5 $\land$
 ($\exists$a $\exists$b (a $\neq$ x) $\land$ (b $\neq$ x)
-$\land$ (a $\times$ b = x))
+$\land$ (a $\times$ b = x)))
 
 \section*{Question 4}
 let N(x, y) be the predicate "x is a neighbour of y"
@@ -105,7 +112,7 @@ $\forall$\,x\,(x $\neq$ a $\rightarrow$ $\exists$y(N(x, y)))
 \subsection*{Question 5}
 An inference rule is sound iff assignment of truth values that
 makes all the antecedents of the rule true must also make the
-consequent true.
+consequent true.\\
 
 \noindent
 \textbf{a)} \bm{$\displaystyle \frac{P}{P}$}
@@ -115,10 +122,11 @@ P $\equiv$ P by rule of identity\\
 Therefore, the inference rule is sound
 \parskip 6mm
 
+\newpage
 \noindent
 \textbf{b)} \bm{$\displaystyle \frac{P}{P \leftrightarrow Q}$}
 
-Counter example: if Q if false, the axiom is true but the conclusion is false\\
+Counter example: if Q if false and P is true then, the axiom is true but the conclusion is false\\
 \indent
 Therefore, the inference rule is unsound
 
@@ -150,7 +158,7 @@ Therefore, the inference rule is sound
         \hline
         3. P & 1, double negation \\
         \hline
-        4. Q & 3, 2, Demorgan's laws\\
+        4. Q & 2, 3, Modus ponens \\
         \hline
     \end{tabular}
 \end{displaymath}
@@ -178,7 +186,7 @@ $\rightarrow$ $\exists$x.R(x)
         \hline
         6. $\neg Q(a) \to (P(a) \land R(a))$ & 3, implication law \\
         \hline
-        7. $P(a) \land R(a)$ & 5, 6, Modus ponens\\
+        7. $P(a) \land R(a)$ & 6, 5, Modus ponens\\
         \hline
         8. R(a) & 7, conjunction elimination \\
         \hline
@@ -215,7 +223,7 @@ where $p\prime$ and $q\prime$ are integers (by our assumption that the result is
 2p$q\prime$ - $p\prime$q and 2$q\prime$q are integers
 
 \noindent
-k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
+We showed that k can be represented in the form of $\frac{a}{b}$ where a and b are  integers, \\
 therefore, we have a contradiction as k is a non-squidgy number yet, \\
 can be represented as a fraction of integers \\
 Our assumption that the result is a squidgy number must be false. \\
@@ -238,11 +246,12 @@ where k is an integer \\
     5x &= 10k - 5 \text{  (multiplying both sides by 5)} \\
     5x - 1 &= 10k - 6 \text{  (substracting 1 from both sides)} \\
     &=2(5k - 3) \text{  (factoring out 2)} \\
-    &=2n \text{  (where n = 5k-3)} \\
+    &=2 k \prime \text{  (where $k \prime$ = 5k-3)} \\
 \end{align*}
-5x-1 is of the form 2n which is an even number.\\
+5x-1 is of the form $2 k \prime$ which is an even number.\\
 therefore, for any odd integer x, 5x -1 is an even integer
-\\ \\
+
+\noindent
 \textbf{second direction: if 5x-1 is an even integer then x is an odd integer} \\
 \\
 The contrapositive of the statement is - \\
@@ -250,25 +259,26 @@ if x is not an odd integer then 5x-1 is not an even integer \\
 We need to prove that
 if x is an even integer then 5x-1 is an odd integer \\
 \\
-let x be an arbitary even integer then x is of the form 2n
-where n is an integer \\
+let x be an arbitary even integer then x is of the form 2k
+where k is an integer \\
 \begin{align*}
-    x &= 2n \\
-    5x &= 10n \text{  (multiplying both sides by 5)} \\
-    5x - 1 &= 10n - 1 \text{  (substracting 1 from both sides)}  \\
-    &= 2(5n)  - 1 \text{  (factoring out 2)} \\
-    &= 2k - 1 \text{  (where k is 5n)}
+    x &= 2k \\
+    5x &= 10k \text{  (multiplying both sides by 5)} \\
+    5x - 1 &= 10k - 1 \text{  (substracting 1 from both sides)}  \\
+    &= 2(5k)  - 1 \text{  (factoring out 2)} \\
+    &= 2k\prime - 1 \text{  (where $k\prime$ = 5k)}
 \end{align*}
 
 \noindent
-5x - 1 is of the form 2k - 1 which is an odd number \\
+5x - 1 is of the form $2k\prime - 1$ which is an odd number \\
 therefore, for any even integer x, 5x - 1 is an odd integer
 
 \noindent
 \textbf{Conclusion} \\
 therefore, we have proved that if x is odd, then 5x-1 is even \\
 and if 5x-1 is even then x is odd. \\
-It follows that x is odd if and only if 5x-1 is even
+It follows that x is odd if and only if 5x-1 is even \\
+Q.E.D.
 
 \subsection*{Question 9}
 let P(n) be "there exists an ordering of players $p_1, p_2...p_n$
@@ -290,25 +300,38 @@ Now, we need to show that P(K+1) holds given the inductive hypothesis \\
 \\
 We can arrange the first K players as $p_1, p_2, \ldots, p_k$
 such that $p_i$ defeats $p_{i+1}$ for all
-$i = 1, 2, \ldots, k-1$.\\
+$i = 1, 2, \ldots, k-1$. \\
+note that we haven't considered any matches with $p_{k+1}$ yet \\
 \\
-Consider adding a new player $p_{k+1}$. Since $p_{k+1}$\\
+Now, we need to add a new player $p_{k+1}$. Since $p_{k+1}$
 plays a match against every other player, it either wins or loses each match.\\
+
+\noindent
+if $p_{k+1}$ beat all other players it can be inserted at the front.\\
+The arrangement "$p_{k+1}, p_1, p_2 \ldots p_{k}$" will satisfy the condition \\
 \\
-Find a player $pj$ among the existing $k$ players such that:\\
-$p_{j}$ defeats $p_{k+1}$ and \\
-$p_{k+1}$ defeats $p_{j+1}$,
-or if $j = k$, $p_{k+1}$ defeats no player after $p_j$.\\
+Similarly, if $p_{k+1}$ loses to all other players it can be inserted at the end of the arrangement.\\
+"$p_1, p_2 \ldots p_{k}, p_{k+1}$" will satisfy the condition\\
+\\
+Now, we will consider the final case, if $p_{k+1}$ defeated some players and lost to others.\\
+Find a player $p_j$ among the existing $k$ players such that
+$p_{j}$ defeats $p_{k+1}$ and $p_{k+1}$ defeats $p_{j+1}$ \\
+\\
+We know that such a value of j exists because the arrangement includes
+players who beat $p_{k+1}$ and players who lost to $p_{k+1}$
+so there must be a point where two such players are adjacent. \\
 \\
 Insert $p_{k+1}$ between $p_j$ and $p_{j+1}$, resulting in the new sequence:\\
-$p1, p_2, \ldots, p_j, p_{k+1}, p_{j+1}, \ldots, p_k$.\\
+$p_1, p_2, \ldots, p_j, p_{k+1}, p_{j+1}, \ldots, p_k$.\\
 In this new order:\\
-$p_i$ defeats $p_{i+1}$ for all $i = 1, 2, \ldots, j-1$.\\
+$p_i$ defeats $p_{i+1}$ for all $i = 1, 2, \ldots, j-2$.\\
 $p_j$ defeats $p_{k+1}$.\\
 $p_{k+1}$ defeats $p_{j+1}$.\\
 $p_i$ defeats $p_{i+1}$ for all $i = j+1, j+2, \ldots, k$.\\
 \\
-Thus, we have arranged $k+1$ players in the required order.\\
+Thus, we have arranged $k+1$ players such that $p_i$ defeats $p_{i+1}$
+for all $i \in 1, 2, \ldots k$\\
+Q.E.D.
 
 \subsection*{Question 10}
 \underline{\textbf{Base cases}}: \\
@@ -347,13 +370,12 @@ $A(\psi) \geq 2B(\psi)$
 Therefore, $\forall \phi . A(\phi) \geq 2B(\phi)$\\
 Q.E.D
 \subsection*{Question 11}
-\underline{\textbf{Definitions}}:\\\\
 \textbf{Union}: The union of sets A and B is a set containing all elements appearing in either A or B or both.\\
 \textbf{Intersection}: The intersection of sets A and B is a set containing all elements appearing in both A and B\\
+\\
 (i) $(A \cap \neg B \cap \neg C) \cup (B \cap C)$ \\ \\
 (ii) $(A \cap \neg B \cap \neg C) \cup (B \cap \neg A \cap \neg C) \cup (C \cap \neg A \cap \neg B)$
 
-% TODO simplify examples
 \subsection*{Question 12}
 (a) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
 %
@@ -361,8 +383,8 @@ I will disprove the given proposition with a counter-example: \\
 let X = \{1, 2, 3, 4\} \\
 Suppose R = \{(1, 2)(2, 3)(3, 4)(4, 4)\} and S = \{(2, 1)(3, 2)(4, 3)(4, 4)\} \\
 then T = \{(1, 1)(2, 2)(3, 3)(4, 4)(3, 4)(4, 3)\} \\
-Here, R and S are not reflexive since (1, 1) $\notin$ R and (1, 1) $\notin$ S \\
-but T is reflexive
+Here, R and S are not reflexive since $1 \in X$ but (1, 1) $\notin$ R and (1, 1) $\notin$ S \\
+but T is reflexive since $\forall x \in X, T(x, x)$
 
 \noindent
 (b) Definition: R is reflexive iff $\forall x \in X, R(x, x)$ \\ \\
